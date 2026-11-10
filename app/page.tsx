@@ -7,8 +7,8 @@ const nav = [
   { label: 'Home', href: '#home' },
   { label: 'Over Elke', href: '#over' },
   { label: 'Expertise', href: '#expertise' },
-  { label: 'Werkwijze', href: '#werkwijze' },
   { label: 'Onderwijs', href: '#onderwijs' },
+  { label: 'Verwijzers', href: '#verwijzers' },
   { label: 'Contact', href: '#contact' }
 ];
 
@@ -50,7 +50,7 @@ export default function Home() {
     <header className="site-header">
       <div className="container nav-row">
         <a className="brand" href="#home" aria-label="Losch Dental — naar home">
-          <span className="brand-symbol">L<span>.</span></span>
+          <span className="brand-symbol">✧</span>
           <span className="brand-text"><strong>LOSCH DENTAL</strong><small>ENDODONTOLOGIE · UTRECHT</small></span>
         </a>
         <nav className="desktop-nav" aria-label="Hoofdnavigatie">{nav.slice(0,5).map(item => <a key={item.href} href={item.href}>{item.label}</a>)}</nav>
@@ -60,36 +60,24 @@ export default function Home() {
       {menuOpen && <nav id="mobile-navigation" className="mobile-nav" aria-label="Mobiele navigatie">{nav.map(item => <a key={item.href} onClick={() => setMenuOpen(false)} href={item.href}>{item.label} <ArrowUpRight size={16}/></a>)}</nav>}
     </header>
     <main id="main">
-      <section className="hero" id="home">
-        <div className="hero-grain" aria-hidden="true"/>
-        <div className="container hero-grid">
-          <div className="hero-content">
-            <span className="eyebrow light"><span className="eyebrow-line"/> TANDARTS ENDODONTOLOGIE · UTRECHT</span>
-            <h1>Bijzondere zorg<br/>voor <em>uw eigen</em><br/>glimlach.</h1>
-            <p className="hero-lead">Gespecialiseerde aandacht voor endodontologie. Met precisie, rust en persoonlijke betrokkenheid — omdat een goede behandeling begint met vertrouwen.</p>
-            <div className="hero-actions"><a href="#contact" className="button button-gold">Neem contact op <ArrowUpRight size={18}/></a><a href="#expertise" className="text-link light-link">Ontdek mijn expertise <ArrowRight size={17}/></a></div>
-            <div className="hero-signature"><span className="signature-line"/><span>Elke Losch <small>Tandarts · Endodontologie</small></span></div>
-          </div>
-          <div className="hero-art">
-            <div className="hero-photo" role="img" aria-label="Rustige sfeerimpressie van een lichte tandheelkundige praktijk" />
-            <div className="hero-photo-label"><span className="dot"/><span>ZORG MET AANDACHT<br/><strong>Voor iedere stap</strong></span></div>
-            <div className="hero-vertical">LOSCH DENTAL — UTRECHT</div>
-          </div>
-        </div>
-        <div className="container hero-bottom"><span>DESKUNDIGHEID &nbsp;·&nbsp; RUST &nbsp;·&nbsp; VERTROUWEN</span><a href="#over" aria-label="Scroll naar over Elke"><ArrowDown size={18}/></a><span>01 / 05</span></div>
-      </section>
-
-      <section className="intro section-pad" id="over">
+      <section className="hero" id="home"><div className="container hero-grid"><div className="hero-content">
+<span className="eyebrow"><span className="eyebrow-line"/> WELKOM BIJ LOSCH DENTAL</span>
+<h1>Gespecialiseerde<br/><em>endodontologische</em><br/>zorg in Utrecht.</h1>
+<p className="hero-lead">Deskundige wortelkanaalbehandelingen, met persoonlijke aandacht en rust. Elke Losch combineert jarenlange tandheelkundige ervaring met een zorgvuldige, heldere aanpak.</p>
+<div className="hero-actions"><a className="button button-gold" href="#contact">Neem contact op <ArrowUpRight size={18}/></a><a href="#expertise" className="text-link light-link">Ontdek de behandelingen <ArrowRight size={17}/></a></div>
+<div className="hero-trust"><span><Check size={16}/> Persoonlijke aandacht</span><span><Check size={16}/> Moderne endodontologie</span><span><Check size={16}/> Utrecht en omgeving</span></div>
+</div><div className="hero-art"><div className="hero-photo" role="img" aria-label="Sfeerbeeld van een moderne tandheelkundige behandelruimte"/><div className="hero-photo-label"><span className="dot"/><span>MET AANDACHT EN PRECISIE<br/><strong>Uw gebit in goede handen</strong></span></div></div></div></section>
+<section className="intro section-pad" id="over">
         <div className="container intro-grid">
           <Reveal className="intro-image-col"><div className="portrait-frame"><img src="/Elke-losch.jpg" alt="Portret van tandarts Elke Losch"/><span className="portrait-annotation">ELKE LOSCH<br/><small>TANDARTS · ENDODONTOLOGIE</small></span></div><div className="image-corner" aria-hidden="true"/></Reveal>
-          <Reveal className="intro-copy"><span className="eyebrow"><span className="eyebrow-line"/> AANGENAAM KENNIS TE MAKEN</span><h2>Een persoonlijke<br/>benadering. <em>Met oog<br/>voor detail.</em></h2><p className="large-copy">Ik ben Elke Losch, tandarts met een bijzondere interesse en expertise in de endodontologie.</p><p>In mijn werk combineer ik zorgvuldige diagnostiek en behandeling met duidelijke communicatie. Ik vind het belangrijk dat u begrijpt wat er gebeurt, welke mogelijkheden er zijn en dat er ruimte blijft voor uw vragen.</p><p>Naast mijn werk als tandarts ben ik betrokken bij het onderwijs aan toekomstige mondzorgprofessionals. Zo komen praktijkervaring, kennis en aandacht voor mensen samen.</p><a href="#werkwijze" className="underlined-link">Meer over mijn werkwijze <MoveUpRight size={18}/></a></Reveal>
+          <Reveal className="intro-copy"><span className="eyebrow"><span className="eyebrow-line"/> OVER ELKE LOSCH</span><h2>Even voorstellen:<br/><em>Elke Losch.</em></h2><p className="large-copy">Ik ben Elke Losch, tandarts met een bijzondere interesse en expertise in de endodontologie.</p><p>In mijn werk combineer ik zorgvuldige diagnostiek en behandeling met duidelijke communicatie. Ik vind het belangrijk dat u begrijpt wat er gebeurt, welke mogelijkheden er zijn en dat er ruimte blijft voor uw vragen.</p><p>Naast mijn werk als tandarts ben ik betrokken bij het onderwijs aan toekomstige mondzorgprofessionals. Zo komen praktijkervaring, kennis en aandacht voor mensen samen.</p><a href="#werkwijze" className="underlined-link">Mijn werkwijze <MoveUpRight size={18}/></a></Reveal>
         </div>
       </section>
 
-      <section className="quote-strip"><div className="container quote-grid"><span className="quote-icon">“</span><blockquote>Goede zorg gaat niet alleen over wat je doet, maar ook over <em>hoe iemand zich daarbij voelt.</em></blockquote><span className="quote-caption">DE FILOSOFIE ACHTER LOSCH DENTAL</span></div></section>
+      <section className="quote-strip"><div className="container quote-grid"><span className="quote-icon">“</span><blockquote>Een goed behandelresultaat begint bij <em>vertrouwen, duidelijke uitleg en persoonlijke aandacht.</em></blockquote><span className="quote-caption">ONZE BENADERING</span></div></section>
 
       <section className="expertise section-pad" id="expertise"><div className="container">
-        <Reveal className="section-heading-row"><div><span className="eyebrow"><span className="eyebrow-line"/> EXPERTISE & AANDACHTSGEBIEDEN</span><h2>Zorg die verder kijkt<br/>dan <em>de behandeling.</em></h2></div><p>Elke situatie is anders. Daarom draait goede endodontologische zorg om een zorgvuldige afweging, heldere uitleg en een persoonlijke aanpak.</p></Reveal>
+        <Reveal className="section-heading-row"><div><span className="eyebrow"><span className="eyebrow-line"/> ONZE EXPERTISE</span><h2>Specialistische zorg.<br/><em>Met aandacht.</em></h2></div><p>Elke situatie is anders. Daarom draait goede endodontologische zorg om een zorgvuldige afweging, heldere uitleg en een persoonlijke aanpak.</p></Reveal>
         <div className="service-grid">{services.map(item => <Reveal className="service-card" key={item.no}><div className="service-top"><span>{item.no} / 04</span><item.icon size={25} strokeWidth={1.25}/></div><div><h3>{item.title}</h3><p>{item.text}</p></div><a href="#contact" aria-label={'Meer informatie over ' + item.title}>Meer informatie <ArrowUpRight size={17}/></a></Reveal>)}</div>
       </div></section>
 
@@ -97,7 +85,7 @@ export default function Home() {
 
       <section className="teaching section-pad" id="onderwijs"><div className="container teaching-grid"><Reveal className="teaching-visual"><div className="teaching-image" role="img" aria-label="Onderwijs- en werkomgeving in de mondzorg"/><div className="teaching-badge"><BookOpen size={24}/><span>KENNIS DELEN<br/><strong>Blijven ontwikkelen</strong></span></div></Reveal><Reveal className="teaching-copy"><span className="eyebrow"><span className="eyebrow-line"/> KENNIS & ONDERWIJS</span><h2>Kennis delen.<br/><em>Samen groeien.</em></h2><p className="large-copy">Goede mondzorg begint bij nieuwsgierigheid, kennis en de bereidheid om te blijven leren.</p><p>Als docent mondzorgkunde in Utrecht draag ik bij aan de ontwikkeling van toekomstige professionals. In het onderwijs besteed ik aandacht aan klinisch denken, praktische vaardigheden en patiëntgerichte communicatie.</p><a href="#contact" className="underlined-link">Meer weten? Neem contact op <MoveUpRight size={18}/></a></Reveal></div></section>
 
-      <section className="referral"><div className="container referral-inner"><div><span className="eyebrow light"><span className="eyebrow-line"/> VOOR VERWIJZERS</span><h2>Samen werken aan<br/><em>de juiste zorg.</em></h2></div><div><p>Een goede samenwerking met de verwijzende tandarts is belangrijk voor continuïteit en een zorgvuldig behandeltraject. Neem contact op om een casus of mogelijke verwijzing te bespreken.</p><a href="#contact" className="button button-gold">Contact voor verwijzers <ArrowUpRight size={18}/></a></div></div></section>
+      <section className="referral" id="verwijzers"><div className="container referral-inner"><div><span className="eyebrow light"><span className="eyebrow-line"/> VOOR VERWIJZERS</span><h2>Samen werken aan<br/><em>de juiste zorg.</em></h2></div><div><p>Een goede samenwerking met de verwijzende tandarts is belangrijk voor continuïteit en een zorgvuldig behandeltraject. Neem contact op om een casus of mogelijke verwijzing te bespreken.</p><a href="#contact" className="button button-gold">Contact voor verwijzers <ArrowUpRight size={18}/></a></div></div></section>
 
       <section className="faq-section section-pad" id="vragen"><div className="container faq-grid"><Reveal><span className="eyebrow"><span className="eyebrow-line"/> GOED OM TE WETEN</span><h2>Veelgestelde<br/><em>vragen.</em></h2><p>Een aantal antwoorden op vragen die vaak spelen rondom endodontologische zorg.</p></Reveal><div className="faq-list">{faqs.map((item,i)=><div className={'faq-item '+(faq===i?'open':'')} key={item.q}><button aria-expanded={faq===i} aria-controls={'faq-answer-'+i} onClick={()=>setFaq(faq===i?null:i)}><span>{item.q}</span><ChevronDown size={19}/></button>{faq===i&&<div id={'faq-answer-'+i} className="faq-answer">{item.a}</div>}</div>)}</div></div></section>
 
