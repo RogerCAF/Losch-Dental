@@ -54,21 +54,18 @@
 .about-content p{max-width:580px}
 @media(max-width:900px){.hero-inner{gap:0}.hero-visual:before{inset:-9px 9px 9px -9px}}
 
-/* Final commissioned visual assets (self-hosted after image upload).
-   The second image layer is a temporary fallback until both files are uploaded. */
+/* Commissioned, self-hosted visual assets — no external stock-image dependency. */
 .hero-image{
  background-image:linear-gradient(140deg,rgba(16,49,39,.035),rgba(16,49,39,.08)),
- url('/images/hero-losch-dental.jpg'),
- url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1600&q=85');
- background-size:cover,cover,cover;
- background-position:center,center,center;
+ url('/images/hero-losch-dental.jpg');
+ background-size:cover,cover;
+ background-position:center,center;
  filter:saturate(.94) contrast(1.01);
 }
 .education-photo{
- background-image:url('/images/endodontologie-detail.jpg'),
- url('https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1300&q=85');
- background-size:cover,cover;
- background-position:center,center;
+ background-image:url('/images/endodontologie-detail.jpg');
+ background-size:cover;
+ background-position:center;
  filter:saturate(.88) contrast(1.01);
 }
 .image-credit{font-size:10px;line-height:1.7;color:#9eafa0;letter-spacing:.015em}
